@@ -43,6 +43,8 @@ make clean
 --enable-static \
 --disable-network \
 --disable-encoders \
+--enable-mediacodec \
+--enable-jni \
 --enable-encoder=libx264 \
 --enable-encoder=aac \
 --enable-encoder=mpeg4 \
