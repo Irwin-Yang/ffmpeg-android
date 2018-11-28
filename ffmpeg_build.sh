@@ -14,6 +14,12 @@ case $1 in
 esac
 
 make clean
+#Removed:
+#--enable-fontconfig \
+#--enable-libfreetype \
+#--enable-pthreads \
+#--enable-libfribidi \
+
 
 ./configure \
 --target-os="$TARGET_OS" \
@@ -25,13 +31,8 @@ make clean
 --enable-pic \
 --enable-libx264 \
 --enable-libass \
---enable-libfreetype \
---enable-libfribidi \
 --enable-libmp3lame \
---enable-fontconfig \
---enable-pthreads \
 --disable-debug \
---disable-ffserver \
 --enable-version3 \
 --enable-hardcoded-tables \
 --disable-ffplay \
@@ -43,8 +44,14 @@ make clean
 --enable-static \
 --disable-network \
 --disable-encoders \
---enable-mediacodec \
 --enable-jni \
+--enable-mediacodec \
+--enable-decoder=h264_mediacodec \
+--enable-hwaccel=h264_mediacodec \
+--enable-decoder=hevc_mediacodec \
+--enable-decoder=mpeg4_mediacodec \
+--enable-decoder=vp8_mediacodec \
+--enable-decoder=vp9_mediacodec \
 --enable-encoder=libx264 \
 --enable-encoder=aac \
 --enable-encoder=mpeg4 \
