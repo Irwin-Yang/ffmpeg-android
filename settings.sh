@@ -1,5 +1,5 @@
 #!/bin/bash
-export ANDROID_NDK=/Users/irwin/Library/Android/android-ndk-r16b
+export ANDROID_NDK=/Users/irwin/Library/Android/android-ndk-r15c
 
 SUPPORTED_ARCHITECTURES=(armeabi-v7a armeabi-v7a-neon x86)
 ANDROID_NDK_ROOT_PATH=${ANDROID_NDK}
@@ -10,7 +10,7 @@ fi
 ANDROID_API_VERSION=24
 NDK_TOOLCHAIN_ABI_VERSION=4.9
 
-#NUMBER_OF_CORES=4
+NUMBER_OF_CORES=8
 
 HOST_UNAME=$(uname -m)
 TARGET_OS=android
